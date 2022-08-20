@@ -1,0 +1,79 @@
+.v-carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+.v-carousel-btn {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  background-color: rgba(31,45,61,.11);
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .3s;
+
+  &.is-left {
+    left: 16px;
+  }
+
+  &.is-right {
+    right: 16px;
+  }
+
+  &:hover {
+    background-color: rgba(31, 45, 61, .23);
+  }
+}
+.v-carousel-indicator {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+}
+.v-carousel-indicator-item {
+  display: inline-block;
+  padding: 12px 4px;
+  cursor: pointer;
+
+  &:hover,
+  &.is-active {
+    .v-carousel-indicator-item-inner {
+      opacity: 1;
+    }
+  }
+}
+.v-carousel-indicator-item-inner {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  opacity: .48;
+  transition: opacity .3s;
+}
+.v-acrousel-indicator-outer {
+  .v-carousel-indicator {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+  .v-carousel-indicator-item-inner {
+    background-color: #c0c4cc;
+    opacity: .24;
+  }
+}
+
+.slide-from-left-enter-from, .slide-from-left-leave-to {
+  margin-left: -20px;
+  opacity: 0;
+}
+.slide-from-right-enter-from, .slide-from-right-leave-to {
+  margin-left: 20px;
+  opacity: 0;
+}

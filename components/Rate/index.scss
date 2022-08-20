@@ -1,0 +1,14 @@
+.v-rate {
+  cursor: pointer;
+  &.is-disabled {
+    cursor: auto;
+    .v-rate-icon {
+      transform: none;
+    }
+  }
+}
+.v-rate-icon {
+  &:hover {
+    transform: scale(1.2);
+  }
+}

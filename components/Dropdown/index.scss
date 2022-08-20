@@ -1,0 +1,119 @@
+.v-dropdown {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+  position: relative;
+  cursor: pointer;
+  &.is-noborder {
+    .first-dropdown {
+      background: none;
+      color: #409eff;
+      border: none;
+      font-weight: bold;
+      &:hover {
+        background: none;
+      }
+    }
+  }
+  &.is-medium {
+    li {
+      height: 36px;
+      line-height: 36px;
+    }
+  }
+  &.is-small {
+    li {
+      width: 80px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 14px;
+    }
+    .dropdown {
+      width: 60px;
+    }
+  }
+  &.is-mini {
+    li {
+      width: 80px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 12px;
+    }
+    .dropdown {
+      width: 60px;
+    }
+  }
+  .first-dropdown {
+    background: #409eff;
+    border: 1px solid #409eff;
+    color: #fff;
+    width: 100px;
+    &:hover {
+      background: mix(#fff, #409eff, 10%);
+    }
+    &:active {
+      background: mix(#000, #409eff, 20%);
+    }
+  }
+  .cartoon {
+    transform-origin: center top;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+  }
+  .triangle {
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom:5px solid mix(#fff, #000, 90%);
+    width:0;
+    height:0;
+  }
+  li {
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+  }
+  .dropdown {
+    border: 1px solid mix(#fff, #000, 90%);
+    background: #fff;
+    width: 80px;
+    &:hover {
+      background-color: #ecf5ff;
+      color: #66b1ff;
+    }
+  }
+}
+.zoom-enter-active {
+  animation: bound .2s;
+}
+.zoom-leave-active {
+  animation: leave .2s;
+}
+// .zoom-enter, .zoom-leave-to {
+//   transform: translateY(10px);
+// }
+// .zoom-enter-to, .zoom-leave {
+// 	transform: translateY(100px);
+// }
+@keyframes bound {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
+@keyframes leave {
+  0% {
+    transform: scaleY(100%);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}

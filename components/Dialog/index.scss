@@ -1,0 +1,51 @@
+.v-dialog {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+  transition: all .3s;
+}
+.v-dialog-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  transition: opacity .3s;
+}
+.v-diglog-head {
+  line-height: 24px;
+  font-size: 18px;
+  padding: 20px 20px 10px;
+  color: #303133;
+}
+.v-diglog-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.v-diglog-body {
+  padding: 10px 15px;
+  color: #606266;
+  font-size: 14px;
+}
+.v-diglog-foot {
+  padding: 10px 20px 20px;
+  text-align: right;
+}
+.dialog-enter-from, .dialog-leave-to {
+  transform: translate(-50%, -50px);
+  opacity: 0;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}

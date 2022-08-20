@@ -1,0 +1,52 @@
+.v-nav-menu {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  &.is-dark {
+    background: rgb(84, 92, 100);
+    .active {
+      border-bottom: 2px solid rgb(255, 208, 75);
+    }
+  }
+  &.is-column {
+    flex-direction: column;
+    justify-content: left;
+    border-bottom: none;
+    .v-dropdown:hover {
+      background: #ecf5ff;
+    }
+    &.is-dark {
+      .v-dropdown:hover {
+        background: mix(#000, rgb(84, 92, 100), 20%);
+      }
+      .active {
+        background: mix(#000, rgb(84, 92, 100), 20%);
+      }
+    }
+    .v-dropdown {
+      width: 100%;
+      .cartoon {
+        position: relative;
+        top: 0;
+        width: 100%;
+        .triangle {
+          display: none;
+        }
+        .dropdown {
+          width: 100%;
+          border-radius: 0;
+        }
+      }
+    }
+    .active {
+      border-bottom: none;
+      background: #ecf5ff;
+    }
+  }
+  .active {
+    border-bottom: 2px solid #409eff;
+  }
+}
